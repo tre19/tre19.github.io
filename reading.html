@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tre19</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-[#B0D1DF] text-black font-sans min-h-screen flex flex-col">
+  
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4">
+    <!-- Left side: just your name -->
+    <h1 class="text-2xl font-bold"></h1>
+
+    <!-- Right side: links + toggle -->
+    <div class="flex items-center">
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Projects</a></li>
+          <li><a href="#" class="hover:underline">Resume</a></li>
+          <li><a href="#" class="hover:underline">Reading</a></li>
+        </ul>
+      </nav>
+      <button id="color-toggle" class="ml-6 w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-500">
+        <!-- Icon -->
+        <svg id="toggle-icon" class="w-6 h-6 transition-transform duration-500" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 0 20V2z" /> <!-- half circle -->
+            <circle cx="12" cy="12" r="4" />      <!-- center circle -->
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Intro Section -->
+  <main class="flex-1 flex flex-col pt-12 px-12">
+  <h2 class="text-5xl font-extrabold mb-6">What I've Read</h2>
+  <ul class="list-disc pl-6 space-y-2">
+      <li><strong>Brave New World</strong> by Aldous Huxley</li>
+      <li><strong>Go Tell It On the Mountain</strong> by James Baldwin</li>
+      <li><strong>O Pioneers</strong> by Willa Cather</li>
+      <li><strong>Niels Lyhne</strong> by J. P. Jacobsen</li>
+      <li><strong>Pride and Prejudice</strong> by Jane Austen</li>
+      <li><strong>1984</strong> by George Orwell</li>
+      <li><strong>The Catcher in the Rye</strong> by J. D. Salinger</li>
+      <li><strong>Things Fall Apart</strong> by Chinua Achebe</li>
+    </ul>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="text-left px-12 py-6 text-sm">
+    © <span id="year"></span> Trenton Kim
+  </footer>
+
+
+</body>
+</html>

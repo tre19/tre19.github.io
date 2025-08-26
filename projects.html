@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tre19</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-[#B0D1DF] text-black font-sans min-h-screen flex flex-col">
+  
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4">
+    <!-- Left side: just your name -->
+    <h1 class="text-2xl font-bold"></h1>
+
+    <!-- Right side: links + toggle -->
+    <div class="flex items-center">
+      <nav>
+        <ul class="flex gap-6">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Projects</a></li>
+          <li><a href="#" class="hover:underline">Resume</a></li>
+          <li><a href="#" class="hover:underline">Reading</a></li>
+        </ul>
+      </nav>
+      <button id="color-toggle" class="ml-6 w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-500">
+        <!-- Icon -->
+        <svg id="toggle-icon" class="w-6 h-6 transition-transform duration-500" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 0 20V2z" /> <!-- half circle -->
+            <circle cx="12" cy="12" r="4" />      <!-- center circle -->
+        </svg>
+      </button>
+
+    </div>
+  </header>
+
+<!-- Projects Section -->
+  <main class="flex-1 flex flex-col pt-12 px-12">
+    <h2 class="text-5xl font-extrabold mb-6">What I've Made</h2>
+     <!-- Project -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-16">
+        <div class="md:w-2/3">
+        <h3 class="text-2xl font-semibold">Real-Time Personalized Streaming Dashboard</h3>
+        <p class="text-600 italic mb-3">Kafka, Spark, React, Node.js, Postgres</p>
+        <ul class="list-disc pl-5 space-y-2 text-700">
+            <li>Designed a mock real-time streaming pipeline with Kafka and Spark to process event data such as video plays, likes, and ratings</li>
+            <li>Built a scalable backend to deliver personalized recommendations with low-latency responses</li>
+            <li>Developed an interactive React dashboard to display personalized recommendations and trending insights</li>
+        </ul>
+        </div>
+        <!--
+        <div class="md:w-1/3">
+        <img src="images/streaming-dashboard.png" alt="Streaming Dashboard Screenshot" class="rounded-xl shadow-md w-full">
+        </div>
+        -->
+    </div>
+
+    <!-- Project -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-16">
+        <div class="md:w-2/3">
+        <h3 class="text-2xl font-semibold">Automated Narrated Video Generator</h3>
+        <p class="text-600 italic mb-3">FastAPI, MoviePy, python-pptx, Google Text-to-Speech</p>
+        <ul class="list-disc pl-5 space-y-2 text-700">
+            <li>Developed an application to automatically convert PowerPoint presentations into narrated video clips</li>
+            <li>Implemented slide extraction, video assembly, and voiceovers</li>
+            <li>Tested the system for lab usage, ensuring reliable automated video generation</li>
+        </ul>
+        </div>
+        <!--
+        <div class="md:w-1/3">
+        <img src="images/slideclips.png" alt="Automated Narrated Video Generator Screenshot" class="rounded-xl shadow-md w-full">
+        </div>
+        -->
+    </div>
+
+    <!-- Project -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-16">
+        <div class="md:w-2/3">
+        <h3 class="text-2xl font-semibold">Job Trends Dashboard</h3>
+        <p class="text-600 italic mb-3">Spark, React, Plotly, Python, SQLite</p>
+        <ul class="list-disc pl-5 space-y-2 text-700">
+            <li>Engineered a Spark-based aggregation pipeline to analyze job posting data across multiple tech companies by role, company, and skill demand</li>
+            <li>Implemented REST APIs in Python to serve aggregated job data to frontend queries</li>
+            <li>Created a React dashboard with Plotly to visualize hiring patterns and emerging skill trends</li>
+        </ul>
+        </div>
+        <!--
+        <div class="md:w-1/3">
+        <img src="images/job-trends-dashboard.png" alt="Job Trends Dashboard Screenshot" class="rounded-xl shadow-md w-full">
+        </div>
+        -->
+    </div>
+
+    <!-- Project -->
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+        <div class="md:w-2/3">
+        <h3 class="text-2xl font-semibold">catnip.nu</h3>
+        <p class="text-600 italic mb-3">MongoDB, Express, React, Node.js, Leaflet, Tailwind CSS</p>
+        <ul class="list-disc pl-5 space-y-2 text-700">
+            <li>Developed a full-stack web app with an interactive Leaflet map to showcase and filter on-campus events, backed by MongoDB.</li>
+            <li>Implemented real-time event fetching and responsive Tailwind-styled UI for smooth user interaction.</li>
+            <li>Awarded Best Design at the 2024 Northwestern IEEE Technical Showcase by a panel of industry professionals.</li>
+        </ul>
+        </div>
+        <!--
+        <div class="md:w-1/3">
+        <img src="images/catnip.png" alt="catnip.nu Screenshot" class="rounded-xl shadow-md w-full">
+        </div>
+        -->
+    </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-left px-12 py-6 text-sm">
+    © <span id="year"></span> Trenton Kim
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
